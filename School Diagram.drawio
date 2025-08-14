@@ -1,0 +1,119 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="01 - Logical Network Diagram" id="oKCcOgt2sBsXEdx-xRA4">
+    <mxGraphModel dx="980" dy="705" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFE5F6,#121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xiMllIlxYElswwuMJ1gE-1" value="Internet" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-2" value="Firewall (Inter-VLAN Routing + NAT)pfSense Mini‑PC&amp;nbsp;&lt;div&gt;NAT: 197.35.120.10 ↔ 10.10.0.0/16&lt;/div&gt;" style="shape=mxgraph.cisco.security.firewall;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="55" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-3" value="Router (WAN)Cisco ISR 4321&amp;nbsp;&amp;nbsp;" style="shape=mxgraph.cisco.routers.router;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-4" value="Core Switch (L2)Catalyst L2&amp;nbsp;" style="shape=mxgraph.cisco.switches.workgroup_switch;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="65" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-5" value="Server Rack" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="935" y="40" width="340" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-6" value="Host 1 (AD/DNS, DHCP, NPS)&amp;nbsp;" style="shape=mxgraph.cisco.servers.general_server;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;" vertex="1" parent="xiMllIlxYElswwuMJ1gE-5">
+          <mxGeometry x="55" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-7" value="Host 2 (File, Web, Proxy)" style="shape=mxgraph.cisco.servers.general_server;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;" vertex="1" parent="xiMllIlxYElswwuMJ1gE-5">
+          <mxGeometry x="195" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-8" value="NAS (Backups)Synology DS423+ + 2×8TB" style="shape=mxgraph.cisco.storage.storage_array;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="xiMllIlxYElswwuMJ1gE-5">
+          <mxGeometry x="105" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-9" value="Access SW – Bldg A / F1L2&amp;nbsp;" style="shape=mxgraph.cisco.switches.workgroup_switch;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="286" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-10" value="Access SW – Bldg A / F2L2 ~ 22,000 EGP" style="shape=mxgraph.cisco.switches.workgroup_switch;whiteSpace=wrap;html=1;fillColor=light-dark(#F8CECC,#512D2B);strokeColor=#b85450;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="296" y="410" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-11" value="Access SW – Bldg B / F1L2&amp;nbsp;" style="shape=mxgraph.cisco.switches.workgroup_switch;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="220" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-12" value="Access SW – Bldg B / F2L2&amp;nbsp;" style="shape=mxgraph.cisco.switches.workgroup_switch;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-13" value="AP Wi‑Fi 6EAP620 HD ~ 4,800 EGP" style="shape=mxgraph.cisco.wireless.andor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="613" y="236" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-14" value="AP Wi‑Fi 6EAP620 HD ~ 4,800 EGP&lt;br&gt;[Ethernet Cat6]" style="shape=mxgraph.cisco.wireless.andor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="94" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-15" value="UPS APC 1500VA ~ 12,000 EGP" style="shape=note;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="840" y="250" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-16" value="Rack + Cabling + Patch Panels ~ 20,000 EGP" style="shape=note;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="250" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-17" value="VLAN 10 – Students (10.10.10.0/24)" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#e8f4ff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-18" value="VLAN 20 – Teachers/Admin (10.10.20.0/24)" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#fff7e6;" vertex="1" parent="1">
+          <mxGeometry x="810" y="320" width="200" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-19" value="VLAN 30 – Servers (10.10.30.0/24)" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#ffecec;" vertex="1" parent="1">
+          <mxGeometry x="600" y="550" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-20" value="VLAN 40 – Guest (10.10.40.0/24)" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#ecffec;" vertex="1" parent="1">
+          <mxGeometry x="810" y="560" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-21" value="VLAN 99 – Mgmt (10.10.99.0/24)" style="shape=swimlane;rounded=0;html=1;horizontal=0;swimlaneFillColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="320" width="270" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-22" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-1" target="xiMllIlxYElswwuMJ1gE-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-23" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-2" target="xiMllIlxYElswwuMJ1gE-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-24" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-3" target="xiMllIlxYElswwuMJ1gE-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-25" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-4" target="xiMllIlxYElswwuMJ1gE-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="147" />
+              <mxPoint x="285" y="147" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-26" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-4" target="xiMllIlxYElswwuMJ1gE-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="156" />
+              <mxPoint x="375" y="156" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-27" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-4" target="xiMllIlxYElswwuMJ1gE-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-28" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-4" target="xiMllIlxYElswwuMJ1gE-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="218" />
+              <mxPoint x="566" y="218" />
+              <mxPoint x="566" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-29" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="xiMllIlxYElswwuMJ1gE-4" target="xiMllIlxYElswwuMJ1gE-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-31" value="AP Wi‑Fi 6EAP620 HD ~ 4,800 EGP" style="shape=mxgraph.cisco.wireless.andor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="624" y="176" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xiMllIlxYElswwuMJ1gE-33" value="AP Wi‑Fi 6EAP620 HD ~ 4,800 EGP" style="shape=mxgraph.cisco.wireless.andor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="714" y="176" width="80" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
